@@ -1,1 +1,0 @@
-# sql_hw_2_netology
