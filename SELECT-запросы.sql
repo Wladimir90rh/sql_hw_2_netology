@@ -19,9 +19,16 @@ from artists
 where artistname not like '% %'
 
 --- Название треков, которые содержат слово «мой» или «my».
-select trackname   
+select trackName
 from tracks
-where trackname like '%мой%' or trackname like '%my%'
+where trackName ilike 'мой'
+   or trackName ilike 'мой %'
+   or trackName ilike '% мой %'
+   or trackName ilike '% мой'
+   or trackName ilike 'my'
+   or trackName ilike 'my %'
+   or trackName ilike '% my %'
+   or trackName ilike '% my'
 
 --- Количество исполнителей в каждом жанре.
 select g.genrename, count(a.artistname) cnt
