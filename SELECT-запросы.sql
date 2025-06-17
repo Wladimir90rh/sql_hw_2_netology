@@ -6,7 +6,7 @@ where duration = (select max(duration) from tracks)
 --- Название треков, продолжительность которых не менее 3,5 минут.
 select trackname, duration 
 from tracks
-where duration < 210
+where duration >= 210
 
 --- Названия сборников, вышедших в период с 2018 по 2020 год включительно.
 select songbookname, year
